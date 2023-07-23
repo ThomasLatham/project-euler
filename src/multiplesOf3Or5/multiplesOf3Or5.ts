@@ -29,8 +29,8 @@ const sequenceDifferencePatternSolution = (maxAddend: number): number => {
   let patternIndex = 0;
 
   while (curAddend < maxAddend) {
-    curAddend += pattern[patternIndex++ % 7];
     sum += curAddend;
+    curAddend += pattern[patternIndex++ % 7];
   }
 
   return sum;

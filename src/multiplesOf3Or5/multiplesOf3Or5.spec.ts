@@ -1,4 +1,7 @@
-import { simpleSolution } from "./multiplesOf3Or5";
+import {
+  sequenceDifferencePatternSolution,
+  simpleSolution,
+} from "./multiplesOf3Or5";
 
 describe("Multiples of 3 or 5", () => {
   const ANSWER = 233168;
@@ -8,6 +11,6 @@ describe("Multiples of 3 or 5", () => {
   });
 
   it("sequenceDifferencePatternSolution", () => {
-    expect(simpleSolution(1000)).toBe(ANSWER);
+    expect(sequenceDifferencePatternSolution(1000)).toBe(ANSWER);
   });
 });
