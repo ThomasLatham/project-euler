@@ -1,11 +1,12 @@
 {
   "compilerOptions": {
-    "target": "es2016",
+    "target": "es6",
     "module": "commonjs",
-    "lib": ["es6"],
     "rootDir": "src",
     "resolveJsonModule": true,
+    "moduleResolution": "node",
     "allowJs": true,
+    "typeRoots": ["./node_modules/@types"],
     "outDir": "build",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
@@ -13,5 +14,6 @@
     "noImplicitAny": true,
     "skipLibCheck": true
   },
-  "exclude": ["build", "./jest.config.js"]
+  "include": ["src"],
+  "exclude": ["build", "node_modules"]
 }
