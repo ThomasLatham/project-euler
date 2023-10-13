@@ -41,4 +41,29 @@ const sumEveryThirdFibonacciNumber = (maxAddend: number): number => {
   return sum;
 };
 
-export { sumEvenFibonacciNumbers, sumEveryThirdFibonacciNumber };
+/**
+ * Sums the even Fibonacci numbers, up to and including the given `maxAddend`.
+ *
+ * @param maxAddend The maximum addend to be added to the sum.
+ * @returns The sum of all even Fiboannci numbers less than or equal to the `maxAddend`.
+ */
+const sumEvenFibonacciNumbersImproved = (maxAddend: number): number => {
+  let prev: number = 0;
+  let cur: number = 2;
+  let sum: number = 0;
+
+  while (cur <= maxAddend) {
+    sum += cur;
+    const next = cur * 4 + prev;
+    prev = cur;
+    cur = next;
+  }
+
+  return sum;
+};
+
+export {
+  sumEvenFibonacciNumbers,
+  sumEveryThirdFibonacciNumber,
+  sumEvenFibonacciNumbersImproved,
+};
