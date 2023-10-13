@@ -3,7 +3,7 @@ import {
   simpleSolution,
 } from "./multiplesOf3Or5";
 
-describe("Multiples of 3 or 5", () => {
+describe("Project Euler Problem 1: Multiples of 3 or 5", () => {
   const ANSWER = 233168;
 
   it("simpleSolution", () => {
