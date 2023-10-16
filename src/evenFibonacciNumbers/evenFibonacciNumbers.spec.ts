@@ -1,6 +1,7 @@
 import {
   sumEvenFibonacciNumbers,
-  sumEvenFibonacciNumbersImproved,
+  sumEvenFibonacciNumbersV2,
+  sumEvenFibonacciNumbersV3,
   sumEveryThirdFibonacciNumber,
 } from "./evenFibonacciNumbers";
 
@@ -20,8 +21,12 @@ describe("Project Euler Problem 2: Even Fibonacci Numbers", () => {
       expect(sumEvenFibonacciNumbers(4000000)).toEqual<number>(ANSWER);
     });
 
-    it("sumEvenFibonacciNumbersImproved() returns the right answer for Project Euler", () => {
-      expect(sumEvenFibonacciNumbersImproved(4000000)).toEqual<number>(ANSWER);
+    it("sumEvenFibonacciNumbersV2() returns the right answer for Project Euler", () => {
+      expect(sumEvenFibonacciNumbersV2(4000000)).toEqual<number>(ANSWER);
+    });
+
+    it("sumEvenFibonacciNumbersV3() returns the right answer for Project Euler", () => {
+      expect(sumEvenFibonacciNumbersV3(4000000)).toEqual<number>(ANSWER);
     });
   });
 
@@ -40,10 +45,18 @@ describe("Project Euler Problem 2: Even Fibonacci Numbers", () => {
       }
     });
 
-    it("sumEvenFibonacciNumbers() and sumEvenFibonacciNumbersImproved() return the same values", () => {
+    it("sumEvenFibonacciNumbers() and sumEvenFibonacciNumbersV2() return the same values", () => {
       for (const baselineValue of BASELINE) {
         expect(sumEvenFibonacciNumbers(baselineValue)).toEqual<number>(
-          sumEvenFibonacciNumbersImproved(baselineValue)
+          sumEvenFibonacciNumbersV2(baselineValue)
+        );
+      }
+    });
+
+    it("sumEvenFibonacciNumbers() and sumEvenFibonacciNumbersV3() return the same values", () => {
+      for (const baselineValue of BASELINE) {
+        expect(sumEvenFibonacciNumbers(baselineValue)).toEqual<number>(
+          sumEvenFibonacciNumbersV3(baselineValue)
         );
       }
     });
